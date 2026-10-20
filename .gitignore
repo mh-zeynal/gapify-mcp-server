@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.env
+*.tgz
+
+# Local-only docs, not part of the repo
+PUBLISHING.md
+*.docx

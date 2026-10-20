@@ -1,0 +1,42 @@
+{
+  "name": "gapify-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server exposing the Gapify (Chatwoot-compatible) customer-support API as tools, with Persian (Farsi) input support",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "gapify-mcp-server": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "gapify",
+    "chatwoot",
+    "customer-support",
+    "persian",
+    "farsi"
+  ],
+  "scripts": {
+    "generate": "node scripts/generate-tools.mjs",
+    "build": "npm run generate && tsc && node -e \"require('fs').cpSync('src/generated','dist/generated',{recursive:true})\"",
+    "prepublishOnly": "npm run build",
+    "start": "node dist/index.js",
+    "inspect": "npx @modelcontextprotocol/inspector node dist/index.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^5.9.0"
+  }
+}

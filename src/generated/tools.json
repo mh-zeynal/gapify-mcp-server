@@ -1,0 +1,4621 @@
+[
+  {
+    "name": "gapify_platform_create_account",
+    "folder": "Accounts",
+    "title": "Create an Account",
+    "method": "POST",
+    "path": "/platform/api/v1/accounts",
+    "summary": "Create an Account",
+    "authLine": "Platform app API key (header `api-access-token`).",
+    "auth": "platform",
+    "pathParams": [],
+    "queryParams": [],
+    "bodyFields": [
+      {
+        "name": "name",
+        "type": "string",
+        "required": false,
+        "description": "Name of the account",
+        "example": "string"
+      }
+    ],
+    "bodyExample": {
+      "name": "string"
+    }
+  },
+  {
+    "name": "gapify_platform_get_account",
+    "folder": "Accounts",
+    "title": "Get an account details",
+    "method": "GET",
+    "path": "/platform/api/v1/accounts/{account_id}",
+    "summary": "Get the details of an account",
+    "authLine": "Platform app API key (header `api-access-token`).",
+    "auth": "platform",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [],
+    "bodyExample": null
+  },
+  {
+    "name": "gapify_platform_update_account",
+    "folder": "Accounts",
+    "title": "Update an account",
+    "method": "PATCH",
+    "path": "/platform/api/v1/accounts/{account_id}",
+    "summary": "Update an account's attributes",
+    "authLine": "Platform app API key (header `api-access-token`).",
+    "auth": "platform",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [
+      {
+        "name": "name",
+        "type": "string",
+        "required": false,
+        "description": "Name of the account",
+        "example": "string"
+      }
+    ],
+    "bodyExample": {
+      "name": "string"
+    }
+  },
+  {
+    "name": "gapify_platform_delete_account",
+    "folder": "Accounts",
+    "title": "Delete an Account",
+    "method": "DELETE",
+    "path": "/platform/api/v1/accounts/{account_id}",
+    "summary": "Delete an Account",
+    "authLine": "Platform app API key (header `api-access-token`).",
+    "auth": "platform",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [],
+    "bodyExample": null
+  },
+  {
+    "name": "gapify_platform_list_account_users",
+    "folder": "Account Users",
+    "title": "List all Account Users",
+    "method": "GET",
+    "path": "/platform/api/v1/accounts/{account_id}/account_users",
+    "summary": "List all account users",
+    "authLine": "Platform app API key (header `api-access-token`).",
+    "auth": "platform",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [],
+    "bodyExample": null
+  },
+  {
+    "name": "gapify_platform_create_account_user",
+    "folder": "Account Users",
+    "title": "Create an Account User",
+    "method": "POST",
+    "path": "/platform/api/v1/accounts/{account_id}/account_users",
+    "summary": "Create an Account User",
+    "authLine": "Platform app API key (header `api-access-token`).",
+    "auth": "platform",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [
+      {
+        "name": "user_id",
+        "type": "number",
+        "required": true,
+        "description": "The ID of the user",
+        "example": 1
+      },
+      {
+        "name": "role",
+        "type": "string",
+        "required": true,
+        "description": "whether user is an administrator or agent",
+        "example": "string"
+      }
+    ],
+    "bodyExample": {
+      "user_id": 1,
+      "role": "string"
+    }
+  },
+  {
+    "name": "gapify_platform_delete_account_user",
+    "folder": "Account Users",
+    "title": "Delete an Account User",
+    "method": "DELETE",
+    "path": "/platform/api/v1/accounts/{account_id}/account_users",
+    "summary": "Delete an Account User",
+    "authLine": "Platform app API key (header `api-access-token`).",
+    "auth": "platform",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [
+      {
+        "name": "user_id",
+        "type": "number",
+        "required": true,
+        "description": "The ID of the user",
+        "example": 1
+      }
+    ],
+    "bodyExample": {
+      "user_id": 1
+    }
+  },
+  {
+    "name": "gapify_platform_list_agent_bots",
+    "folder": "AgentBots",
+    "title": "List all AgentBots",
+    "method": "GET",
+    "path": "/platform/api/v1/agent_bots",
+    "summary": "List all agent bots available",
+    "authLine": "Platform app API key (header `api-access-token`).",
+    "auth": "platform",
+    "pathParams": [],
+    "queryParams": [],
+    "bodyFields": [],
+    "bodyExample": null
+  },
+  {
+    "name": "gapify_platform_create_agent_bot",
+    "folder": "AgentBots",
+    "title": "Create an Agent Bot",
+    "method": "POST",
+    "path": "/platform/api/v1/agent_bots",
+    "summary": "Create an agent bot",
+    "authLine": "Platform app API key (header `api-access-token`).",
+    "auth": "platform",
+    "pathParams": [],
+    "queryParams": [],
+    "bodyFields": [
+      {
+        "name": "name",
+        "type": "string",
+        "required": false,
+        "description": "The name of the agent bot",
+        "example": "string"
+      },
+      {
+        "name": "description",
+        "type": "string",
+        "required": false,
+        "description": "The description about the agent bot",
+        "example": "string"
+      },
+      {
+        "name": "outgoing_url",
+        "type": "string",
+        "required": false,
+        "description": "The webhook URL for the bot",
+        "example": "https://example.com"
+      }
+    ],
+    "bodyExample": {
+      "name": "string",
+      "description": "string",
+      "outgoing_url": "https://example.com"
+    }
+  },
+  {
+    "name": "gapify_platform_get_agent_bot",
+    "folder": "AgentBots",
+    "title": "Get an agent bot details",
+    "method": "GET",
+    "path": "/platform/api/v1/agent_bots/{id}",
+    "summary": "Get the details of an agent bot",
+    "authLine": "Platform app API key (header `api-access-token`).",
+    "auth": "platform",
+    "pathParams": [
+      {
+        "name": "id",
+        "description": "The ID of the agentbot to be updated"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [],
+    "bodyExample": null
+  },
+  {
+    "name": "gapify_platform_update_agent_bot",
+    "folder": "AgentBots",
+    "title": "Update an agent bot",
+    "method": "PATCH",
+    "path": "/platform/api/v1/agent_bots/{id}",
+    "summary": "Update an agent bot's attributes",
+    "authLine": "Platform app API key (header `api-access-token`).",
+    "auth": "platform",
+    "pathParams": [
+      {
+        "name": "id",
+        "description": "The ID of the agentbot to be updated"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [
+      {
+        "name": "name",
+        "type": "string",
+        "required": false,
+        "description": "The name of the agent bot",
+        "example": "string"
+      },
+      {
+        "name": "description",
+        "type": "string",
+        "required": false,
+        "description": "The description about the agent bot",
+        "example": "string"
+      },
+      {
+        "name": "outgoing_url",
+        "type": "string",
+        "required": false,
+        "description": "The webhook URL for the bot",
+        "example": "https://example.com"
+      }
+    ],
+    "bodyExample": {
+      "name": "string",
+      "description": "string",
+      "outgoing_url": "https://example.com"
+    }
+  },
+  {
+    "name": "gapify_platform_delete_agent_bot",
+    "folder": "AgentBots",
+    "title": "Delete an AgentBot",
+    "method": "DELETE",
+    "path": "/platform/api/v1/agent_bots/{id}",
+    "summary": "Delete an agent bot",
+    "authLine": "Platform app API key (header `api-access-token`).",
+    "auth": "platform",
+    "pathParams": [
+      {
+        "name": "id",
+        "description": "The ID of the agentbot to be updated"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [],
+    "bodyExample": null
+  },
+  {
+    "name": "gapify_platform_create_user",
+    "folder": "Users",
+    "title": "Create a User",
+    "method": "POST",
+    "path": "/platform/api/v1/users",
+    "summary": "Create a User",
+    "authLine": "Platform app API key (header `api-access-token`).",
+    "auth": "platform",
+    "pathParams": [],
+    "queryParams": [],
+    "bodyFields": [
+      {
+        "name": "name",
+        "type": "string",
+        "required": false,
+        "description": "Name of the user",
+        "example": "string"
+      },
+      {
+        "name": "email",
+        "type": "string",
+        "required": false,
+        "description": "Email of the user",
+        "example": "user@example.com"
+      },
+      {
+        "name": "password",
+        "type": "string",
+        "required": false,
+        "description": "Password must contain uppercase, lowercase letters, number and a special character",
+        "example": "string"
+      },
+      {
+        "name": "custom_attributes",
+        "type": "object",
+        "required": false,
+        "description": "Custom attributes you want to associate with the user",
+        "example": {}
+      }
+    ],
+    "bodyExample": {
+      "name": "string",
+      "email": "user@example.com",
+      "password": "string",
+      "custom_attributes": {}
+    }
+  },
+  {
+    "name": "gapify_platform_get_user",
+    "folder": "Users",
+    "title": "Get an user details",
+    "method": "GET",
+    "path": "/platform/api/v1/users/{id}",
+    "summary": "Get the details of a user",
+    "authLine": "Platform app API key (header `api-access-token`).",
+    "auth": "platform",
+    "pathParams": [
+      {
+        "name": "id",
+        "description": "The numeric ID of the user on the platform"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [],
+    "bodyExample": null
+  },
+  {
+    "name": "gapify_platform_update_user",
+    "folder": "Users",
+    "title": "Update a user",
+    "method": "PATCH",
+    "path": "/platform/api/v1/users/{id}",
+    "summary": "Update a user's attributes",
+    "authLine": "Platform app API key (header `api-access-token`).",
+    "auth": "platform",
+    "pathParams": [
+      {
+        "name": "id",
+        "description": "The numeric ID of the user on the platform"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [
+      {
+        "name": "name",
+        "type": "string",
+        "required": false,
+        "description": "Name of the user",
+        "example": "string"
+      },
+      {
+        "name": "email",
+        "type": "string",
+        "required": false,
+        "description": "Email of the user",
+        "example": "user@example.com"
+      },
+      {
+        "name": "password",
+        "type": "string",
+        "required": false,
+        "description": "Password must contain uppercase, lowercase letters, number and a special character",
+        "example": "string"
+      },
+      {
+        "name": "custom_attributes",
+        "type": "object",
+        "required": false,
+        "description": "Custom attributes you want to associate with the user",
+        "example": {}
+      }
+    ],
+    "bodyExample": {
+      "name": "string",
+      "email": "user@example.com",
+      "password": "string",
+      "custom_attributes": {}
+    }
+  },
+  {
+    "name": "gapify_platform_delete_user",
+    "folder": "Users",
+    "title": "Delete a User",
+    "method": "DELETE",
+    "path": "/platform/api/v1/users/{id}",
+    "summary": "Delete a User",
+    "authLine": "Platform app API key (header `api-access-token`).",
+    "auth": "platform",
+    "pathParams": [
+      {
+        "name": "id",
+        "description": "The numeric ID of the user on the platform"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [],
+    "bodyExample": null
+  },
+  {
+    "name": "gapify_platform_get_user_sso_link",
+    "folder": "Users",
+    "title": "Get User SSO Link",
+    "method": "GET",
+    "path": "/platform/api/v1/users/{id}/login",
+    "summary": "Get a single sign-on (SSO) login link for a user",
+    "authLine": "Platform app API key (header `api-access-token`).",
+    "auth": "platform",
+    "pathParams": [
+      {
+        "name": "id",
+        "description": "The numeric ID of the user on the platform"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [],
+    "bodyExample": null
+  },
+  {
+    "name": "gapify_list_agent_bots",
+    "folder": "Account AgentBots",
+    "title": "List all AgentBots",
+    "method": "GET",
+    "path": "/api/v1/accounts/{account_id}/agent_bots",
+    "summary": "List all agent bots available for the current account",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [],
+    "bodyExample": null
+  },
+  {
+    "name": "gapify_create_agent_bot",
+    "folder": "Account AgentBots",
+    "title": "Create an Agent Bot",
+    "method": "POST",
+    "path": "/api/v1/accounts/{account_id}/agent_bots",
+    "summary": "Create an agent bot in the account",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [
+      {
+        "name": "name",
+        "type": "string",
+        "required": false,
+        "description": "The name of the agent bot",
+        "example": "string"
+      },
+      {
+        "name": "description",
+        "type": "string",
+        "required": false,
+        "description": "The description about the agent bot",
+        "example": "string"
+      },
+      {
+        "name": "outgoing_url",
+        "type": "string",
+        "required": false,
+        "description": "The webhook URL for the bot",
+        "example": "https://example.com"
+      }
+    ],
+    "bodyExample": {
+      "name": "string",
+      "description": "string",
+      "outgoing_url": "https://example.com"
+    }
+  },
+  {
+    "name": "gapify_get_agent_bot",
+    "folder": "Account AgentBots",
+    "title": "Get an agent bot details",
+    "method": "GET",
+    "path": "/api/v1/accounts/{account_id}/agent_bots/{id}",
+    "summary": "Get the details of an agent bot in the account",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      },
+      {
+        "name": "id",
+        "description": "The ID of the agentbot to be updated"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [],
+    "bodyExample": null
+  },
+  {
+    "name": "gapify_update_agent_bot",
+    "folder": "Account AgentBots",
+    "title": "Update an agent bot",
+    "method": "PATCH",
+    "path": "/api/v1/accounts/{account_id}/agent_bots/{id}",
+    "summary": "Update an agent bot's attributes",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      },
+      {
+        "name": "id",
+        "description": "The ID of the agentbot to be updated"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [
+      {
+        "name": "name",
+        "type": "string",
+        "required": false,
+        "description": "The name of the agent bot",
+        "example": "string"
+      },
+      {
+        "name": "description",
+        "type": "string",
+        "required": false,
+        "description": "The description about the agent bot",
+        "example": "string"
+      },
+      {
+        "name": "outgoing_url",
+        "type": "string",
+        "required": false,
+        "description": "The webhook URL for the bot",
+        "example": "https://example.com"
+      }
+    ],
+    "bodyExample": {
+      "name": "string",
+      "description": "string",
+      "outgoing_url": "https://example.com"
+    }
+  },
+  {
+    "name": "gapify_delete_agent_bot",
+    "folder": "Account AgentBots",
+    "title": "Delete an AgentBot",
+    "method": "DELETE",
+    "path": "/api/v1/accounts/{account_id}/agent_bots/{id}",
+    "summary": "Delete an agent bot from the account",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      },
+      {
+        "name": "id",
+        "description": "The ID of the agentbot to be updated"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [],
+    "bodyExample": null
+  },
+  {
+    "name": "gapify_list_agents",
+    "folder": "Agents",
+    "title": "List Agents in Account",
+    "method": "GET",
+    "path": "/api/v1/accounts/{account_id}/agents",
+    "summary": "List all agents in the account",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [],
+    "bodyExample": null
+  },
+  {
+    "name": "gapify_add_agent",
+    "folder": "Agents",
+    "title": "Add a New Agent",
+    "method": "POST",
+    "path": "/api/v1/accounts/{account_id}/agents",
+    "summary": "Add a new agent to the account",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [
+      {
+        "name": "name",
+        "type": "string",
+        "required": true,
+        "description": "Full Name of the agent",
+        "example": "string"
+      },
+      {
+        "name": "email",
+        "type": "string",
+        "required": true,
+        "description": "Email of the Agent",
+        "example": "user@example.com"
+      },
+      {
+        "name": "role",
+        "type": "string",
+        "required": false,
+        "description": "Role of the agent. One of: `agent`, `administrator`.",
+        "example": "agent"
+      },
+      {
+        "name": "availability_status",
+        "type": "string",
+        "required": false,
+        "description": "Availability of the agent. One of: `available`, `busy`, `offline`.",
+        "example": "available"
+      },
+      {
+        "name": "auto_offline",
+        "type": "boolean",
+        "required": false,
+        "description": "Whether the availability status of agent is configured to go offline automatically when away.",
+        "example": false
+      }
+    ],
+    "bodyExample": {
+      "name": "string",
+      "email": "user@example.com",
+      "role": "agent",
+      "availability_status": "available",
+      "auto_offline": false
+    }
+  },
+  {
+    "name": "gapify_update_agent",
+    "folder": "Agents",
+    "title": "Update Agent in Account",
+    "method": "PATCH",
+    "path": "/api/v1/accounts/{account_id}/agents/{id}",
+    "summary": "Update an agent in the account",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      },
+      {
+        "name": "id",
+        "description": "The ID of the agent to be updated."
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [
+      {
+        "name": "role",
+        "type": "string",
+        "required": false,
+        "description": "Role of the agent. One of: `agent`, `administrator`.",
+        "example": "agent"
+      },
+      {
+        "name": "availability",
+        "type": "string",
+        "required": false,
+        "description": "Availability of the agent. One of: `available`, `busy`, `offline`.",
+        "example": "available"
+      },
+      {
+        "name": "auto_offline",
+        "type": "boolean",
+        "required": false,
+        "description": "Whether the availability status of agent is configured to go offline automatically when away.",
+        "example": false
+      }
+    ],
+    "bodyExample": {
+      "role": "agent",
+      "availability": "available",
+      "auto_offline": false
+    }
+  },
+  {
+    "name": "gapify_remove_agent",
+    "folder": "Agents",
+    "title": "Remove an Agent from Account",
+    "method": "DELETE",
+    "path": "/api/v1/accounts/{account_id}/agents/{id}",
+    "summary": "Remove an agent from the account",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      },
+      {
+        "name": "id",
+        "description": "The ID of the agent to be deleted"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [],
+    "bodyExample": null
+  },
+  {
+    "name": "gapify_list_canned_responses",
+    "folder": "Canned Responses",
+    "title": "List all Canned Responses in an Account",
+    "method": "GET",
+    "path": "/api/v1/accounts/{account_id}/canned_responses",
+    "summary": "List all canned responses (saved reply templates) in the account",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [],
+    "bodyExample": null
+  },
+  {
+    "name": "gapify_add_canned_response",
+    "folder": "Canned Responses",
+    "title": "Add a New Canned Response",
+    "method": "POST",
+    "path": "/api/v1/accounts/{account_id}/canned_responses",
+    "summary": "Add a new canned response to the account",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [
+      {
+        "name": "content",
+        "type": "string",
+        "required": false,
+        "description": "Message content for canned response",
+        "example": "string"
+      },
+      {
+        "name": "short_code",
+        "type": "string",
+        "required": false,
+        "description": "Short Code for quick access of the canned response",
+        "example": "string"
+      }
+    ],
+    "bodyExample": {
+      "content": "string",
+      "short_code": "string"
+    }
+  },
+  {
+    "name": "gapify_update_canned_response",
+    "folder": "Canned Responses",
+    "title": "Update Canned Response in Account",
+    "method": "PATCH",
+    "path": "/api/v1/accounts/{account_id}/canned_responses/{id}",
+    "summary": "Update a canned response in the account",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      },
+      {
+        "name": "id",
+        "description": "The ID of the canned response to be updated."
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [
+      {
+        "name": "content",
+        "type": "string",
+        "required": false,
+        "description": "Message content for canned response",
+        "example": "string"
+      },
+      {
+        "name": "short_code",
+        "type": "string",
+        "required": false,
+        "description": "Short Code for quick access of the canned response",
+        "example": "string"
+      }
+    ],
+    "bodyExample": {
+      "content": "string",
+      "short_code": "string"
+    }
+  },
+  {
+    "name": "gapify_remove_canned_response",
+    "folder": "Canned Responses",
+    "title": "Remove a Canned Response from Account",
+    "method": "DELETE",
+    "path": "/api/v1/accounts/{account_id}/canned_responses/{id}",
+    "summary": "Remove a canned response from the account",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      },
+      {
+        "name": "id",
+        "description": "The ID of the canned response to be deleted"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [],
+    "bodyExample": null
+  },
+  {
+    "name": "gapify_list_contacts",
+    "folder": "Contacts",
+    "title": "List Contacts",
+    "method": "GET",
+    "path": "/api/v1/accounts/{account_id}/contacts",
+    "summary": "List resolved contacts with pagination (15 per page). Resolved contacts are those with an identifier, email or phone number",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      }
+    ],
+    "queryParams": [
+      {
+        "name": "sort",
+        "description": "The attribute by which list should be sorted One of: `name`, `email`, `phone_number`, `last_activity_at`, `-name`, `-email`, `-phone_number`, `-last_activity_at`",
+        "example": "name"
+      },
+      {
+        "name": "page",
+        "description": "The page parameter",
+        "example": "1"
+      }
+    ],
+    "bodyFields": [],
+    "bodyExample": null
+  },
+  {
+    "name": "gapify_create_contact",
+    "folder": "Contacts",
+    "title": "Create Contact",
+    "method": "POST",
+    "path": "/api/v1/accounts/{account_id}/contacts",
+    "summary": "Create a new contact in the account",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [
+      {
+        "name": "inbox_id",
+        "type": "number",
+        "required": true,
+        "description": "Numeric ID of the inbox.",
+        "example": 0
+      },
+      {
+        "name": "name",
+        "type": "string",
+        "required": false,
+        "description": "name of the contact",
+        "example": "string"
+      },
+      {
+        "name": "email",
+        "type": "string",
+        "required": false,
+        "description": "email of the contact",
+        "example": "user@example.com"
+      },
+      {
+        "name": "phone_number",
+        "type": "string",
+        "required": false,
+        "description": "phone number of the contact",
+        "example": "string"
+      },
+      {
+        "name": "avatar",
+        "type": "string",
+        "required": false,
+        "description": "Send the form data with the avatar image binary or use the avatar_url",
+        "example": "string"
+      },
+      {
+        "name": "avatar_url",
+        "type": "string",
+        "required": false,
+        "description": "The url to a jpeg, png file for the contact avatar",
+        "example": "https://example.com"
+      },
+      {
+        "name": "identifier",
+        "type": "string",
+        "required": false,
+        "description": "A unique identifier for the contact in external system",
+        "example": "string"
+      },
+      {
+        "name": "custom_attributes",
+        "type": "object",
+        "required": false,
+        "description": "An object where you can store custom attributes for contact. example {\"type\":\"customer\", \"age\":30}",
+        "example": {}
+      }
+    ],
+    "bodyExample": {
+      "inbox_id": 0,
+      "name": "string",
+      "email": "user@example.com",
+      "phone_number": "string",
+      "avatar": "string",
+      "avatar_url": "https://example.com",
+      "identifier": "string",
+      "custom_attributes": {}
+    }
+  },
+  {
+    "name": "gapify_get_contact",
+    "folder": "Contacts",
+    "title": "Show Contact",
+    "method": "GET",
+    "path": "/api/v1/accounts/{account_id}/contacts/{id}",
+    "summary": "Get a contact by ID",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      },
+      {
+        "name": "id",
+        "description": "ID of the contact"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [],
+    "bodyExample": null
+  },
+  {
+    "name": "gapify_update_contact",
+    "folder": "Contacts",
+    "title": "Update Contact",
+    "method": "PUT",
+    "path": "/api/v1/accounts/{account_id}/contacts/{id}",
+    "summary": "Update a contact by ID",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      },
+      {
+        "name": "id",
+        "description": "ID of the contact"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [
+      {
+        "name": "name",
+        "type": "string",
+        "required": false,
+        "description": "name of the contact",
+        "example": "string"
+      },
+      {
+        "name": "email",
+        "type": "string",
+        "required": false,
+        "description": "email of the contact",
+        "example": "user@example.com"
+      },
+      {
+        "name": "phone_number",
+        "type": "string",
+        "required": false,
+        "description": "phone number of the contact",
+        "example": "string"
+      },
+      {
+        "name": "avatar",
+        "type": "string",
+        "required": false,
+        "description": "Send the form data with the avatar image binary or use the avatar_url",
+        "example": "string"
+      },
+      {
+        "name": "avatar_url",
+        "type": "string",
+        "required": false,
+        "description": "The url to a jpeg, png file for the contact avatar",
+        "example": "https://example.com"
+      },
+      {
+        "name": "identifier",
+        "type": "string",
+        "required": false,
+        "description": "A unique identifier for the contact in external system",
+        "example": "string"
+      },
+      {
+        "name": "custom_attributes",
+        "type": "object",
+        "required": false,
+        "description": "An object where you can store custom attributes for contact. example {\"type\":\"customer\", \"age\":30}",
+        "example": {}
+      }
+    ],
+    "bodyExample": {
+      "name": "string",
+      "email": "user@example.com",
+      "phone_number": "string",
+      "avatar": "string",
+      "avatar_url": "https://example.com",
+      "identifier": "string",
+      "custom_attributes": {}
+    }
+  },
+  {
+    "name": "gapify_delete_contact",
+    "folder": "Contacts",
+    "title": "Delete Contact",
+    "method": "DELETE",
+    "path": "/api/v1/accounts/{account_id}/contacts/{id}",
+    "summary": "Delete a contact by ID",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      },
+      {
+        "name": "id",
+        "description": "ID of the contact"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [],
+    "bodyExample": null
+  },
+  {
+    "name": "gapify_list_contact_conversations",
+    "folder": "Contacts",
+    "title": "Contact Conversations",
+    "method": "GET",
+    "path": "/api/v1/accounts/{account_id}/contacts/{id}/conversations",
+    "summary": "List the conversations of a contact",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      },
+      {
+        "name": "id",
+        "description": "ID of the contact"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [],
+    "bodyExample": null
+  },
+  {
+    "name": "gapify_search_contacts",
+    "folder": "Contacts",
+    "title": "Search Contacts",
+    "method": "GET",
+    "path": "/api/v1/accounts/{account_id}/contacts/search",
+    "summary": "Search resolved contacts by name, identifier, email or phone number (15 per page). Persian names and Persian-digit phone numbers are accepted",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      }
+    ],
+    "queryParams": [
+      {
+        "name": "q",
+        "description": "Search using contact `name`, `identifier`, `email` or `phone number`",
+        "example": ""
+      },
+      {
+        "name": "sort",
+        "description": "The attribute by which list should be sorted One of: `name`, `email`, `phone_number`, `last_activity_at`, `-name`, `-email`, `-phone_number`, `-last_activity_at`",
+        "example": "name"
+      },
+      {
+        "name": "page",
+        "description": "The page parameter",
+        "example": "1"
+      }
+    ],
+    "bodyFields": [],
+    "bodyExample": null
+  },
+  {
+    "name": "gapify_filter_contacts",
+    "folder": "Contacts",
+    "title": "Contact Filter",
+    "method": "POST",
+    "path": "/api/v1/accounts/{account_id}/contacts/filter",
+    "summary": "Filter contacts with custom filter options and pagination",
+    "authLine": "User API key **or** Agent bot API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      }
+    ],
+    "queryParams": [
+      {
+        "name": "page",
+        "description": "Page number, starting at 1.",
+        "example": ""
+      }
+    ],
+    "bodyFields": [
+      {
+        "name": "payload",
+        "type": "array",
+        "required": false,
+        "description": "Array of filter conditions. Each item: {attribute_key, filter_operator (e.g. equal_to, not_equal_to, contains, does_not_contain), values: [...], query_operator: \"AND\" | \"OR\", null on the last item}. Values may be Persian text.",
+        "example": [
+          {
+            "attribute_key": "name",
+            "filter_operator": "equal_to",
+            "values": [
+              "en"
+            ],
+            "query_operator": "AND"
+          },
+          {
+            "attribute_key": "country_code",
+            "filter_operator": "equal_to",
+            "values": [
+              "us"
+            ],
+            "query_operator": null
+          }
+        ]
+      }
+    ],
+    "bodyExample": {
+      "payload": [
+        {
+          "attribute_key": "name",
+          "filter_operator": "equal_to",
+          "values": [
+            "en"
+          ],
+          "query_operator": "AND"
+        },
+        {
+          "attribute_key": "country_code",
+          "filter_operator": "equal_to",
+          "values": [
+            "us"
+          ],
+          "query_operator": null
+        }
+      ]
+    }
+  },
+  {
+    "name": "gapify_create_contact_inbox",
+    "folder": "Contacts",
+    "title": "Create contact inbox",
+    "method": "POST",
+    "path": "/api/v1/accounts/{account_id}/contacts/{id}/contact_inboxes",
+    "summary": "Create a contact inbox record for an inbox",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      },
+      {
+        "name": "id",
+        "description": "ID of the contact"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [
+      {
+        "name": "inbox_id",
+        "type": "number",
+        "required": true,
+        "description": "The ID of the inbox",
+        "example": 0
+      },
+      {
+        "name": "source_id",
+        "type": "string",
+        "required": false,
+        "description": "Contact Inbox Source Id",
+        "example": "string"
+      }
+    ],
+    "bodyExample": {
+      "inbox_id": 0,
+      "source_id": "string"
+    }
+  },
+  {
+    "name": "gapify_get_contactable_inboxes",
+    "folder": "Contacts",
+    "title": "Get Contactable Inboxes",
+    "method": "GET",
+    "path": "/api/v1/accounts/{account_id}/contacts/{id}/contactable_inboxes",
+    "summary": "List the inboxes through which a contact can be reached",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      },
+      {
+        "name": "id",
+        "description": "ID of the contact"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [],
+    "bodyExample": null
+  },
+  {
+    "name": "gapify_list_contact_labels",
+    "folder": "Contact Labels",
+    "title": "List Labels",
+    "method": "GET",
+    "path": "/api/v1/accounts/{account_id}/contacts/{contact_identifier}/labels",
+    "summary": "List the labels of a contact",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      },
+      {
+        "name": "contact_identifier",
+        "description": "The source id of contact obtained on contact create"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [],
+    "bodyExample": null
+  },
+  {
+    "name": "gapify_set_contact_labels",
+    "folder": "Contact Labels",
+    "title": "Add Labels",
+    "method": "POST",
+    "path": "/api/v1/accounts/{account_id}/contacts/{contact_identifier}/labels",
+    "summary": "Set the labels of a contact. Replaces the contact's existing labels with the given list",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      },
+      {
+        "name": "contact_identifier",
+        "description": "The source id of contact obtained on contact create"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [
+      {
+        "name": "labels",
+        "type": "array",
+        "required": false,
+        "description": "Array of labels (comma-separated strings)",
+        "example": [
+          "string"
+        ]
+      }
+    ],
+    "bodyExample": {
+      "labels": [
+        "string"
+      ]
+    }
+  },
+  {
+    "name": "gapify_assign_conversation",
+    "folder": "Conversation Assignment",
+    "title": "Assign Conversation",
+    "method": "POST",
+    "path": "/api/v1/accounts/{account_id}/conversations/{conversation_id}/assignments",
+    "summary": "Assign a conversation to an agent or a team",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      },
+      {
+        "name": "conversation_id",
+        "description": "The numeric ID of the conversation"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [
+      {
+        "name": "assignee_id",
+        "type": "number",
+        "required": false,
+        "description": "Id of the assignee user",
+        "example": 0
+      },
+      {
+        "name": "team_id",
+        "type": "number",
+        "required": false,
+        "description": "Id of the team. If the assignee_id is present, this param would be ignored",
+        "example": 0
+      }
+    ],
+    "bodyExample": {
+      "assignee_id": 0,
+      "team_id": 0
+    }
+  },
+  {
+    "name": "gapify_list_conversation_labels",
+    "folder": "Conversation Labels",
+    "title": "List Labels",
+    "method": "GET",
+    "path": "/api/v1/accounts/{account_id}/conversations/{conversation_id}/labels",
+    "summary": "List the labels of a conversation",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      },
+      {
+        "name": "conversation_id",
+        "description": "The numeric ID of the conversation"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [],
+    "bodyExample": null
+  },
+  {
+    "name": "gapify_set_conversation_labels",
+    "folder": "Conversation Labels",
+    "title": "Add Labels",
+    "method": "POST",
+    "path": "/api/v1/accounts/{account_id}/conversations/{conversation_id}/labels",
+    "summary": "Set the labels of a conversation. Replaces the conversation's existing labels with the given list",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      },
+      {
+        "name": "conversation_id",
+        "description": "The numeric ID of the conversation"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [
+      {
+        "name": "labels",
+        "type": "array",
+        "required": false,
+        "description": "Array of labels (comma-separated strings)",
+        "example": [
+          "string"
+        ]
+      }
+    ],
+    "bodyExample": {
+      "labels": [
+        "string"
+      ]
+    }
+  },
+  {
+    "name": "gapify_get_conversation_counts",
+    "folder": "Conversations",
+    "title": "Get Conversation Counts",
+    "method": "GET",
+    "path": "/api/v1/accounts/{account_id}/conversations/meta",
+    "summary": "Get conversation counts by assignment (mine, unassigned, assigned, all), with optional filters",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      }
+    ],
+    "queryParams": [
+      {
+        "name": "status",
+        "description": "Filter by conversation status. One of: `open`, `resolved`, `pending`, `snoozed`",
+        "example": "open"
+      },
+      {
+        "name": "q",
+        "description": "Filters conversations with messages containing the search term",
+        "example": ""
+      },
+      {
+        "name": "inbox_id",
+        "description": "Numeric ID of the inbox.",
+        "example": ""
+      },
+      {
+        "name": "team_id",
+        "description": "Numeric ID of the team.",
+        "example": ""
+      },
+      {
+        "name": "labels",
+        "description": "Label names to filter by, comma-separated.",
+        "example": ""
+      }
+    ],
+    "bodyFields": [],
+    "bodyExample": null
+  },
+  {
+    "name": "gapify_list_conversations",
+    "folder": "Conversations",
+    "title": "Conversations List",
+    "method": "GET",
+    "path": "/api/v1/accounts/{account_id}/conversations",
+    "summary": "List conversations with filters and pagination",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      }
+    ],
+    "queryParams": [
+      {
+        "name": "assignee_type",
+        "description": "Filter conversations by assignee type. One of: `me`, `unassigned`, `all`, `assigned`",
+        "example": "all"
+      },
+      {
+        "name": "status",
+        "description": "Filter by conversation status. One of: `open`, `resolved`, `pending`, `snoozed`",
+        "example": "open"
+      },
+      {
+        "name": "q",
+        "description": "Filters conversations with messages containing the search term",
+        "example": ""
+      },
+      {
+        "name": "inbox_id",
+        "description": "Numeric ID of the inbox.",
+        "example": ""
+      },
+      {
+        "name": "team_id",
+        "description": "Numeric ID of the team.",
+        "example": ""
+      },
+      {
+        "name": "labels",
+        "description": "Label names to filter by, comma-separated.",
+        "example": ""
+      },
+      {
+        "name": "page",
+        "description": "paginate through conversations",
+        "example": "1"
+      }
+    ],
+    "bodyFields": [],
+    "bodyExample": null
+  },
+  {
+    "name": "gapify_create_conversation",
+    "folder": "Conversations",
+    "title": "Create New Conversation",
+    "method": "POST",
+    "path": "/api/v1/accounts/{account_id}/conversations",
+    "summary": "Create a conversation for a contact in an inbox. Requires the contact inbox source_id (see gapify_create_contact_inbox)",
+    "authLine": "User API key **or** Agent bot API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [
+      {
+        "name": "source_id",
+        "type": "string",
+        "required": true,
+        "description": "Conversation source id",
+        "example": "string"
+      },
+      {
+        "name": "inbox_id",
+        "type": "string",
+        "required": true,
+        "description": "Id of inbox in which the conversation is created <br/> Allowed Inbox Types: Website, Phone, Api, Email",
+        "example": "string"
+      },
+      {
+        "name": "contact_id",
+        "type": "string",
+        "required": false,
+        "description": "Contact Id for which conversation is created",
+        "example": "string"
+      },
+      {
+        "name": "additional_attributes",
+        "type": "object",
+        "required": false,
+        "description": "Lets you specify attributes like browser information",
+        "example": {}
+      },
+      {
+        "name": "custom_attributes",
+        "type": "object",
+        "required": false,
+        "description": "The object to save custom attributes for conversation, accepts custom attributes key and value",
+        "example": {
+          "attribute_key": "attribute_value",
+          "priority_conversation_number": 3
+        }
+      },
+      {
+        "name": "status",
+        "type": "string",
+        "required": false,
+        "description": "Initial status of the conversation. One of: `open`, `resolved`, `pending`.",
+        "example": "open"
+      },
+      {
+        "name": "assignee_id",
+        "type": "string",
+        "required": false,
+        "description": "Agent Id for assigning a conversation to an agent",
+        "example": "string"
+      },
+      {
+        "name": "team_id",
+        "type": "string",
+        "required": false,
+        "description": "Team Id for assigning a conversation to a team",
+        "example": "string"
+      },
+      {
+        "name": "message",
+        "type": "object",
+        "required": false,
+        "description": "The initial message to be sent to the conversation",
+        "example": {
+          "content": "string",
+          "template_params": {
+            "name": "sample_issue_resolution",
+            "category": "UTILITY",
+            "language": "en_US",
+            "processed_params": {
+              "1": "Gapify"
+            }
+          }
+        }
+      }
+    ],
+    "bodyExample": {
+      "source_id": "string",
+      "inbox_id": "string",
+      "contact_id": "string",
+      "additional_attributes": {},
+      "custom_attributes": {
+        "attribute_key": "attribute_value",
+        "priority_conversation_number": 3
+      },
+      "status": "open",
+      "assignee_id": "string",
+      "team_id": "string",
+      "message": {
+        "content": "string",
+        "template_params": {
+          "name": "sample_issue_resolution",
+          "category": "UTILITY",
+          "language": "en_US",
+          "processed_params": {
+            "1": "Gapify"
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "gapify_filter_conversations",
+    "folder": "Conversations",
+    "title": "Conversations Filter",
+    "method": "POST",
+    "path": "/api/v1/accounts/{account_id}/conversations/filter",
+    "summary": "Filter conversations with custom filter options and pagination",
+    "authLine": "User API key **or** Agent bot API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      }
+    ],
+    "queryParams": [
+      {
+        "name": "page",
+        "description": "Page number, starting at 1.",
+        "example": ""
+      }
+    ],
+    "bodyFields": [
+      {
+        "name": "payload",
+        "type": "array",
+        "required": false,
+        "description": "Array of filter conditions. Each item: {attribute_key, filter_operator (e.g. equal_to, not_equal_to, contains, does_not_contain), values: [...], query_operator: \"AND\" | \"OR\", null on the last item}. Values may be Persian text.",
+        "example": [
+          {
+            "attribute_key": "browser_language",
+            "filter_operator": "not_eq",
+            "values": [
+              "en"
+            ],
+            "query_operator": "AND"
+          },
+          {
+            "attribute_key": "status",
+            "filter_operator": "eq",
+            "values": [
+              "pending"
+            ],
+            "query_operator": null
+          }
+        ]
+      }
+    ],
+    "bodyExample": {
+      "payload": [
+        {
+          "attribute_key": "browser_language",
+          "filter_operator": "not_eq",
+          "values": [
+            "en"
+          ],
+          "query_operator": "AND"
+        },
+        {
+          "attribute_key": "status",
+          "filter_operator": "eq",
+          "values": [
+            "pending"
+          ],
+          "query_operator": null
+        }
+      ]
+    }
+  },
+  {
+    "name": "gapify_get_conversation",
+    "folder": "Conversations",
+    "title": "Conversation Details",
+    "method": "GET",
+    "path": "/api/v1/accounts/{account_id}/conversations/{conversation_id}",
+    "summary": "Get a conversation's details by its display ID",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      },
+      {
+        "name": "conversation_id",
+        "description": "The numeric ID of the conversation"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [],
+    "bodyExample": null
+  },
+  {
+    "name": "gapify_toggle_conversation_status",
+    "folder": "Conversations",
+    "title": "Toggle Status",
+    "method": "POST",
+    "path": "/api/v1/accounts/{account_id}/conversations/{conversation_id}/toggle_status",
+    "summary": "Change the status of a conversation (open, resolved, pending or snoozed)",
+    "authLine": "User API key **or** Agent bot API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      },
+      {
+        "name": "conversation_id",
+        "description": "The numeric ID of the conversation"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [
+      {
+        "name": "status",
+        "type": "string",
+        "required": false,
+        "description": "New status. One of: `open`, `resolved`, `pending`, `snoozed`.",
+        "example": "open"
+      }
+    ],
+    "bodyExample": {
+      "status": "open"
+    }
+  },
+  {
+    "name": "gapify_toggle_conversation_priority",
+    "folder": "Conversations",
+    "title": "Toggle Priority",
+    "method": "POST",
+    "path": "/api/v1/accounts/{account_id}/conversations/{conversation_id}/toggle_priority",
+    "summary": "Set the priority of a conversation (urgent, high, medium, low or none)",
+    "authLine": "User API key **or** Agent bot API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      },
+      {
+        "name": "conversation_id",
+        "description": "The numeric ID of the conversation"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [
+      {
+        "name": "priority",
+        "type": "string",
+        "required": false,
+        "description": "New priority. One of: `urgent`, `high`, `medium`, `low`, `none`.",
+        "example": "urgent"
+      }
+    ],
+    "bodyExample": {
+      "priority": "urgent"
+    }
+  },
+  {
+    "name": "gapify_list_custom_attributes",
+    "folder": "Custom Attributes",
+    "title": "List all custom attributes in an account",
+    "method": "GET",
+    "path": "/api/v1/accounts/{account_id}/custom_attribute_definitions",
+    "summary": "List custom attribute definitions in the account",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      }
+    ],
+    "queryParams": [
+      {
+        "name": "attribute_model",
+        "description": "conversation_attribute(0)/contact_attribute(1) One of: `0`, `1`",
+        "example": "0"
+      }
+    ],
+    "bodyFields": [],
+    "bodyExample": null
+  },
+  {
+    "name": "gapify_add_custom_attribute",
+    "folder": "Custom Attributes",
+    "title": "Add a new custom attribute",
+    "method": "POST",
+    "path": "/api/v1/accounts/{account_id}/custom_attribute_definitions",
+    "summary": "Add a new custom attribute to account",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [
+      {
+        "name": "attribute_display_name",
+        "type": "string",
+        "required": false,
+        "description": "Attribute display name",
+        "example": "string"
+      },
+      {
+        "name": "attribute_display_type",
+        "type": "number",
+        "required": false,
+        "description": "Attribute display type (text- 0, number- 1, currency- 2, percent- 3, link- 4, date- 5, list- 6, checkbox- 7)",
+        "example": 0
+      },
+      {
+        "name": "attribute_description",
+        "type": "string",
+        "required": false,
+        "description": "Attribute description",
+        "example": "string"
+      },
+      {
+        "name": "attribute_key",
+        "type": "string",
+        "required": false,
+        "description": "Attribute unique key value",
+        "example": "string"
+      },
+      {
+        "name": "attribute_values",
+        "type": "array",
+        "required": false,
+        "description": "Attribute values",
+        "example": [
+          "string"
+        ]
+      },
+      {
+        "name": "attribute_model",
+        "type": "number",
+        "required": false,
+        "description": "Attribute type(conversation_attribute- 0, contact_attribute- 1)",
+        "example": 0
+      }
+    ],
+    "bodyExample": {
+      "attribute_display_name": "string",
+      "attribute_display_type": 0,
+      "attribute_description": "string",
+      "attribute_key": "string",
+      "attribute_values": [
+        "string"
+      ],
+      "attribute_model": 0
+    }
+  },
+  {
+    "name": "gapify_get_custom_attribute",
+    "folder": "Custom Attributes",
+    "title": "Get a custom attribute details",
+    "method": "GET",
+    "path": "/api/v1/accounts/{account_id}/custom_attribute_definitions/{id}",
+    "summary": "Get a custom attribute definition by ID",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      },
+      {
+        "name": "id",
+        "description": "The ID of the custom attribute to be updated."
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [],
+    "bodyExample": null
+  },
+  {
+    "name": "gapify_update_custom_attribute",
+    "folder": "Custom Attributes",
+    "title": "Update custom attribute in Account",
+    "method": "PATCH",
+    "path": "/api/v1/accounts/{account_id}/custom_attribute_definitions/{id}",
+    "summary": "Update a custom attribute in account",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      },
+      {
+        "name": "id",
+        "description": "The ID of the custom attribute to be updated."
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [
+      {
+        "name": "attribute_display_name",
+        "type": "string",
+        "required": false,
+        "description": "Attribute display name",
+        "example": "string"
+      },
+      {
+        "name": "attribute_display_type",
+        "type": "number",
+        "required": false,
+        "description": "Attribute display type (text- 0, number- 1, currency- 2, percent- 3, link- 4, date- 5, list- 6, checkbox- 7)",
+        "example": 0
+      },
+      {
+        "name": "attribute_description",
+        "type": "string",
+        "required": false,
+        "description": "Attribute description",
+        "example": "string"
+      },
+      {
+        "name": "attribute_key",
+        "type": "string",
+        "required": false,
+        "description": "Attribute unique key value",
+        "example": "string"
+      },
+      {
+        "name": "attribute_values",
+        "type": "array",
+        "required": false,
+        "description": "Attribute values",
+        "example": [
+          "string"
+        ]
+      },
+      {
+        "name": "attribute_model",
+        "type": "number",
+        "required": false,
+        "description": "Attribute type(conversation_attribute- 0, contact_attribute- 1)",
+        "example": 0
+      }
+    ],
+    "bodyExample": {
+      "attribute_display_name": "string",
+      "attribute_display_type": 0,
+      "attribute_description": "string",
+      "attribute_key": "string",
+      "attribute_values": [
+        "string"
+      ],
+      "attribute_model": 0
+    }
+  },
+  {
+    "name": "gapify_remove_custom_attribute",
+    "folder": "Custom Attributes",
+    "title": "Remove a custom attribute from account",
+    "method": "DELETE",
+    "path": "/api/v1/accounts/{account_id}/custom_attribute_definitions/{id}",
+    "summary": "Remove a custom attribute from account",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      },
+      {
+        "name": "id",
+        "description": "The ID of the custom attribute to be deleted"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [],
+    "bodyExample": null
+  },
+  {
+    "name": "gapify_list_custom_filters",
+    "folder": "Custom Filters",
+    "title": "List all custom filters",
+    "method": "GET",
+    "path": "/api/v1/accounts/{account_id}/custom_filters",
+    "summary": "List the current user's saved custom filters of a given type",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      }
+    ],
+    "queryParams": [
+      {
+        "name": "filter_type",
+        "description": "The type of custom filter One of: `conversation`, `contact`, `report`",
+        "example": "conversation"
+      }
+    ],
+    "bodyFields": [],
+    "bodyExample": null
+  },
+  {
+    "name": "gapify_create_custom_filter",
+    "folder": "Custom Filters",
+    "title": "Create a custom filter",
+    "method": "POST",
+    "path": "/api/v1/accounts/{account_id}/custom_filters",
+    "summary": "Create a custom filter in the account",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      }
+    ],
+    "queryParams": [
+      {
+        "name": "filter_type",
+        "description": "The type of custom filter One of: `conversation`, `contact`, `report`",
+        "example": "conversation"
+      }
+    ],
+    "bodyFields": [
+      {
+        "name": "name",
+        "type": "string",
+        "required": false,
+        "description": "The name of the custom filter",
+        "example": "string"
+      },
+      {
+        "name": "type",
+        "type": "string",
+        "required": false,
+        "description": "Type of the custom filter. One of: `conversation`, `contact`, `report`.",
+        "example": "conversation"
+      },
+      {
+        "name": "query",
+        "type": "object",
+        "required": false,
+        "description": "A query that needs to be saved as a custom filter",
+        "example": {}
+      }
+    ],
+    "bodyExample": {
+      "name": "string",
+      "type": "conversation",
+      "query": {}
+    }
+  },
+  {
+    "name": "gapify_get_custom_filter",
+    "folder": "Custom Filters",
+    "title": "Get a custom filter details",
+    "method": "GET",
+    "path": "/api/v1/accounts/{account_id}/custom_filters/{custom_filter_id}",
+    "summary": "Get the details of a custom filter in the account",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      },
+      {
+        "name": "custom_filter_id",
+        "description": "The numeric ID of the custom filter"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [],
+    "bodyExample": null
+  },
+  {
+    "name": "gapify_update_custom_filter",
+    "folder": "Custom Filters",
+    "title": "Update a custom filter",
+    "method": "PATCH",
+    "path": "/api/v1/accounts/{account_id}/custom_filters/{custom_filter_id}",
+    "summary": "Update a custom filter's attributes",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      },
+      {
+        "name": "custom_filter_id",
+        "description": "The numeric ID of the custom filter"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [
+      {
+        "name": "name",
+        "type": "string",
+        "required": false,
+        "description": "The name of the custom filter",
+        "example": "string"
+      },
+      {
+        "name": "type",
+        "type": "string",
+        "required": false,
+        "description": "Type of the custom filter. One of: `conversation`, `contact`, `report`.",
+        "example": "conversation"
+      },
+      {
+        "name": "query",
+        "type": "object",
+        "required": false,
+        "description": "A query that needs to be saved as a custom filter",
+        "example": {}
+      }
+    ],
+    "bodyExample": {
+      "name": "string",
+      "type": "conversation",
+      "query": {}
+    }
+  },
+  {
+    "name": "gapify_delete_custom_filter",
+    "folder": "Custom Filters",
+    "title": "Delete a custom filter",
+    "method": "DELETE",
+    "path": "/api/v1/accounts/{account_id}/custom_filters/{custom_filter_id}",
+    "summary": "Delete a custom filter from the account",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      },
+      {
+        "name": "custom_filter_id",
+        "description": "The numeric ID of the custom filter"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [],
+    "bodyExample": null
+  },
+  {
+    "name": "gapify_list_inboxes",
+    "folder": "Inboxes",
+    "title": "List all inboxes",
+    "method": "GET",
+    "path": "/api/v1/accounts/{account_id}/inboxes",
+    "summary": "List all inboxes available in the current account",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [],
+    "bodyExample": null
+  },
+  {
+    "name": "gapify_get_inbox",
+    "folder": "Inboxes",
+    "title": "Get an inbox",
+    "method": "GET",
+    "path": "/api/v1/accounts/{account_id}/inboxes/{id}/",
+    "summary": "Get an inbox available in the current account",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      },
+      {
+        "name": "id",
+        "description": "ID of the inbox"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [],
+    "bodyExample": null
+  },
+  {
+    "name": "gapify_create_inbox",
+    "folder": "Inboxes",
+    "title": "Create an inbox",
+    "method": "POST",
+    "path": "/api/v1/accounts/{account_id}/inboxes/",
+    "summary": "Create a new inbox (channel) in the account",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [
+      {
+        "name": "name",
+        "type": "string",
+        "required": false,
+        "description": "The name of the inbox",
+        "example": "string"
+      },
+      {
+        "name": "avatar",
+        "type": "string",
+        "required": false,
+        "description": "File for avatar image",
+        "example": "string"
+      },
+      {
+        "name": "channel",
+        "type": "object",
+        "required": false,
+        "description": "Channel settings object. For a website inbox: {type: \"web_widget\", website_url, welcome_title, welcome_tagline, agent_away_message, widget_color}. Text values may be Persian.",
+        "example": {
+          "type": "web_widget",
+          "website_url": "https://example.com",
+          "welcome_title": "string",
+          "welcome_tagline": "string",
+          "agent_away_message": "string",
+          "widget_color": "string"
+        }
+      }
+    ],
+    "bodyExample": {
+      "name": "string",
+      "avatar": "string",
+      "channel": {
+        "type": "web_widget",
+        "website_url": "https://example.com",
+        "welcome_title": "string",
+        "welcome_tagline": "string",
+        "agent_away_message": "string",
+        "widget_color": "string"
+      }
+    }
+  },
+  {
+    "name": "gapify_update_inbox",
+    "folder": "Inboxes",
+    "title": "Update Inbox",
+    "method": "PATCH",
+    "path": "/api/v1/accounts/{account_id}/inboxes/{id}",
+    "summary": "Update an inbox's settings, such as name, avatar and auto assignment",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      },
+      {
+        "name": "id",
+        "description": "ID of the inbox"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [
+      {
+        "name": "name",
+        "type": "string",
+        "required": false,
+        "description": "The name of the inbox",
+        "example": "string"
+      },
+      {
+        "name": "enable_auto_assignment",
+        "type": "boolean",
+        "required": true,
+        "description": "Enable Auto Assignment",
+        "example": false
+      },
+      {
+        "name": "avatar",
+        "type": "string",
+        "required": false,
+        "description": "Image file for avatar",
+        "example": "string"
+      },
+      {
+        "name": "channel",
+        "type": "object",
+        "required": false,
+        "description": "Channel settings object. For a website inbox: {type: \"web_widget\", website_url, welcome_title, welcome_tagline, agent_away_message, widget_color}. Text values may be Persian.",
+        "example": {
+          "website_url": "https://example.com",
+          "welcome_title": "string",
+          "welcome_tagline": "string",
+          "agent_away_message": "string",
+          "widget_color": "string"
+        }
+      }
+    ],
+    "bodyExample": {
+      "name": "string",
+      "enable_auto_assignment": false,
+      "avatar": "string",
+      "channel": {
+        "website_url": "https://example.com",
+        "welcome_title": "string",
+        "welcome_tagline": "string",
+        "agent_away_message": "string",
+        "widget_color": "string"
+      }
+    }
+  },
+  {
+    "name": "gapify_show_inbox_agent_bot",
+    "folder": "Inboxes",
+    "title": "Show Inbox Agent Bot",
+    "method": "GET",
+    "path": "/api/v1/accounts/{account_id}/inboxes/{id}/agent_bot",
+    "summary": "Get the agent bot connected to an inbox, if any",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      },
+      {
+        "name": "id",
+        "description": "ID of the inbox"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [],
+    "bodyExample": null
+  },
+  {
+    "name": "gapify_set_inbox_agent_bot",
+    "folder": "Inboxes",
+    "title": "Add or remove agent bot",
+    "method": "POST",
+    "path": "/api/v1/accounts/{account_id}/inboxes/{id}/set_agent_bot",
+    "summary": "Connect an agent bot to an inbox, or disconnect it by passing agent_bot as null",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      },
+      {
+        "name": "id",
+        "description": "ID of the inbox"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [
+      {
+        "name": "agent_bot",
+        "type": "number",
+        "required": true,
+        "description": "Agent bot ID",
+        "example": 0
+      }
+    ],
+    "bodyExample": {
+      "agent_bot": 0
+    }
+  },
+  {
+    "name": "gapify_list_inbox_agents",
+    "folder": "Inboxes",
+    "title": "List Agents in Inbox",
+    "method": "GET",
+    "path": "/api/v1/accounts/{account_id}/inbox_members/{inbox_id}",
+    "summary": "List the agents assigned to an inbox",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      },
+      {
+        "name": "inbox_id",
+        "description": "The ID of the Inbox"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [],
+    "bodyExample": null
+  },
+  {
+    "name": "gapify_add_inbox_agents",
+    "folder": "Inboxes",
+    "title": "Add a New Agent",
+    "method": "POST",
+    "path": "/api/v1/accounts/{account_id}/inbox_members",
+    "summary": "Add agents to an inbox",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [
+      {
+        "name": "inbox_id",
+        "type": "string",
+        "required": true,
+        "description": "The ID of the inbox",
+        "example": "string"
+      },
+      {
+        "name": "user_ids",
+        "type": "array",
+        "required": true,
+        "description": "IDs of users to be added to the inbox",
+        "example": [
+          1
+        ]
+      }
+    ],
+    "bodyExample": {
+      "inbox_id": "string",
+      "user_ids": [
+        1
+      ]
+    }
+  },
+  {
+    "name": "gapify_update_inbox_agents",
+    "folder": "Inboxes",
+    "title": "Update Agents in Inbox",
+    "method": "PATCH",
+    "path": "/api/v1/accounts/{account_id}/inbox_members",
+    "summary": "Replace the agents of an inbox. Agents not in user_ids are removed from the inbox",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [
+      {
+        "name": "inbox_id",
+        "type": "string",
+        "required": true,
+        "description": "The ID of the inbox",
+        "example": "string"
+      },
+      {
+        "name": "user_ids",
+        "type": "array",
+        "required": true,
+        "description": "IDs of users to be added to the inbox",
+        "example": [
+          1
+        ]
+      }
+    ],
+    "bodyExample": {
+      "inbox_id": "string",
+      "user_ids": [
+        1
+      ]
+    }
+  },
+  {
+    "name": "gapify_remove_inbox_agent",
+    "folder": "Inboxes",
+    "title": "Remove an Agent from Inbox",
+    "method": "DELETE",
+    "path": "/api/v1/accounts/{account_id}/inbox_members",
+    "summary": "Remove agents from an inbox",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [
+      {
+        "name": "inbox_id",
+        "type": "string",
+        "required": true,
+        "description": "The ID of the inbox",
+        "example": "string"
+      },
+      {
+        "name": "user_ids",
+        "type": "array",
+        "required": true,
+        "description": "IDs of users to be deleted from the inbox",
+        "example": [
+          1
+        ]
+      }
+    ],
+    "bodyExample": {
+      "inbox_id": "string",
+      "user_ids": [
+        1
+      ]
+    }
+  },
+  {
+    "name": "gapify_list_integrations",
+    "folder": "Integrations",
+    "title": "List all the Integrations",
+    "method": "GET",
+    "path": "/api/v1/accounts/{account_id}/integrations/apps",
+    "summary": "List the integrations available for the account",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [],
+    "bodyExample": null
+  },
+  {
+    "name": "gapify_create_integration_hook",
+    "folder": "Integrations",
+    "title": "Create an integration hook",
+    "method": "POST",
+    "path": "/api/v1/accounts/{account_id}/integrations/hooks",
+    "summary": "Create an integration hook",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [
+      {
+        "name": "app_id",
+        "type": "string",
+        "required": false,
+        "description": "The ID of app for which integration hook is being created",
+        "example": "string"
+      },
+      {
+        "name": "inbox_id",
+        "type": "string",
+        "required": false,
+        "description": "The inbox ID, if the hook is an inbox hook",
+        "example": "string"
+      },
+      {
+        "name": "settings",
+        "type": "object",
+        "required": false,
+        "description": "The settings required by the integration",
+        "example": {}
+      }
+    ],
+    "bodyExample": {
+      "app_id": "string",
+      "inbox_id": "string",
+      "settings": {}
+    }
+  },
+  {
+    "name": "gapify_update_integration_hook",
+    "folder": "Integrations",
+    "title": "Update an Integration Hook",
+    "method": "PATCH",
+    "path": "/api/v1/accounts/{account_id}/integrations/hooks/{hook_id}",
+    "summary": "Update an Integration Hook",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      },
+      {
+        "name": "hook_id",
+        "description": "The numeric ID of the integration hook"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [
+      {
+        "name": "settings",
+        "type": "object",
+        "required": false,
+        "description": "The settings required by the integration",
+        "example": {}
+      }
+    ],
+    "bodyExample": {
+      "settings": {}
+    }
+  },
+  {
+    "name": "gapify_delete_integration_hook",
+    "folder": "Integrations",
+    "title": "Delete an Integration Hook",
+    "method": "DELETE",
+    "path": "/api/v1/accounts/{account_id}/integrations/hooks/{hook_id}",
+    "summary": "Delete an Integration Hook",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      },
+      {
+        "name": "hook_id",
+        "description": "The numeric ID of the integration hook"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [],
+    "bodyExample": null
+  },
+  {
+    "name": "gapify_get_messages",
+    "folder": "Messages",
+    "title": "Get messages",
+    "method": "GET",
+    "path": "/api/v1/accounts/{account_id}/conversations/{conversation_id}/messages",
+    "summary": "List the messages of a conversation",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      },
+      {
+        "name": "conversation_id",
+        "description": "The numeric ID of the conversation"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [],
+    "bodyExample": null
+  },
+  {
+    "name": "gapify_create_message",
+    "folder": "Messages",
+    "title": "Create New Message",
+    "method": "POST",
+    "path": "/api/v1/accounts/{account_id}/conversations/{conversation_id}/messages",
+    "summary": "Send a new message or private note in a conversation",
+    "authLine": "User API key **or** Agent bot API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      },
+      {
+        "name": "conversation_id",
+        "description": "The numeric ID of the conversation"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [
+      {
+        "name": "content",
+        "type": "string",
+        "required": true,
+        "description": "Text of the message. Any language, including Persian, is sent unchanged.",
+        "example": "string"
+      },
+      {
+        "name": "message_type",
+        "type": "string",
+        "required": false,
+        "description": "Direction of the message. One of: `outgoing` (agent to contact), `incoming`.",
+        "example": "outgoing"
+      },
+      {
+        "name": "private",
+        "type": "boolean",
+        "required": false,
+        "description": "Flag to identify if it is a private note",
+        "example": false
+      },
+      {
+        "name": "content_type",
+        "type": "string",
+        "required": false,
+        "description": "Content type of the message. One of: `text`, `input_email`, `cards`, `input_select`, `form`, `article`. Use `text` for normal messages.",
+        "example": "cards"
+      },
+      {
+        "name": "content_attributes",
+        "type": "object",
+        "required": false,
+        "description": "attributes based on your content type",
+        "example": {}
+      },
+      {
+        "name": "template_params",
+        "type": "object",
+        "required": false,
+        "description": "The template params for the message in case of whatsapp Channel",
+        "example": {
+          "name": "sample_issue_resolution",
+          "category": "UTILITY",
+          "language": "en_US",
+          "processed_params": {
+            "1": "Gapify"
+          }
+        }
+      }
+    ],
+    "bodyExample": {
+      "content": "string",
+      "message_type": "outgoing",
+      "private": false,
+      "content_type": "cards",
+      "content_attributes": {},
+      "template_params": {
+        "name": "sample_issue_resolution",
+        "category": "UTILITY",
+        "language": "en_US",
+        "processed_params": {
+          "1": "Gapify"
+        }
+      }
+    }
+  },
+  {
+    "name": "gapify_delete_message",
+    "folder": "Messages",
+    "title": "Delete a message",
+    "method": "DELETE",
+    "path": "/api/v1/accounts/{account_id}/conversations/{conversation_id}/messages/{message_id}",
+    "summary": "Delete a message and its attachments from a conversation",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      },
+      {
+        "name": "conversation_id",
+        "description": "The numeric ID of the conversation"
+      },
+      {
+        "name": "message_id",
+        "description": "The numeric ID of the message"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [],
+    "bodyExample": null
+  },
+  {
+    "name": "gapify_get_profile",
+    "folder": "Profile",
+    "title": "Fetch user profile",
+    "method": "GET",
+    "path": "/api/v1/profile",
+    "summary": "Get the profile of the user who owns the API access token",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [],
+    "queryParams": [],
+    "bodyFields": [],
+    "bodyExample": null
+  },
+  {
+    "name": "gapify_get_account_reports",
+    "folder": "Reports",
+    "title": "Get Account reports",
+    "method": "GET",
+    "path": "/api/v2/accounts/{account_id}/reports",
+    "summary": "Get time-series report data for a metric, report type and date range",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      }
+    ],
+    "queryParams": [
+      {
+        "name": "metric",
+        "description": "The type of metric One of: `conversations_count`, `incoming_messages_count`, `outgoing_messages_count`, `avg_first_response_time`, `avg_resolution_time`, `resolutions_count`",
+        "example": "conversations_count"
+      },
+      {
+        "name": "type",
+        "description": "Type of report One of: `account`, `agent`, `inbox`, `label`, `team`",
+        "example": "account"
+      },
+      {
+        "name": "id",
+        "description": "The Id of specific object in case of agent/inbox/label",
+        "example": ""
+      },
+      {
+        "name": "since",
+        "description": "The timestamp from where report should start.",
+        "example": ""
+      },
+      {
+        "name": "until",
+        "description": "The timestamp from where report should stop.",
+        "example": ""
+      }
+    ],
+    "bodyFields": [],
+    "bodyExample": null
+  },
+  {
+    "name": "gapify_get_account_reports_summary",
+    "folder": "Reports",
+    "title": "Get Account reports summary",
+    "method": "GET",
+    "path": "/api/v2/accounts/{account_id}/reports/summary",
+    "summary": "Get summary report totals for a report type and date range",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      }
+    ],
+    "queryParams": [
+      {
+        "name": "type",
+        "description": "Type of report One of: `account`, `agent`, `inbox`, `label`, `team`",
+        "example": "account"
+      },
+      {
+        "name": "id",
+        "description": "The Id of specific object in case of agent/inbox/label",
+        "example": ""
+      },
+      {
+        "name": "since",
+        "description": "The timestamp from where report should start.",
+        "example": ""
+      },
+      {
+        "name": "until",
+        "description": "The timestamp from where report should stop.",
+        "example": ""
+      }
+    ],
+    "bodyFields": [],
+    "bodyExample": null
+  },
+  {
+    "name": "gapify_account_conversation_metrics",
+    "folder": "Reports",
+    "title": "Account Conversation Metrics",
+    "method": "GET",
+    "path": "/api/v2/accounts/{account_id}/reports/conversations",
+    "summary": "Get conversation metrics for Account",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      }
+    ],
+    "queryParams": [
+      {
+        "name": "type",
+        "description": "Type of report One of: `account`",
+        "example": "account"
+      }
+    ],
+    "bodyFields": [],
+    "bodyExample": null
+  },
+  {
+    "name": "gapify_agent_conversation_metrics",
+    "folder": "Reports",
+    "title": "Agent Conversation Metrics",
+    "method": "GET",
+    "path": "/api/v2/accounts/{account_id}/reports/conversations/",
+    "summary": "Get conversation metrics for Agent",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      }
+    ],
+    "queryParams": [
+      {
+        "name": "type",
+        "description": "Type of report One of: `agent`",
+        "example": "agent"
+      },
+      {
+        "name": "user_id",
+        "description": "The numeric ID of the user",
+        "example": ""
+      }
+    ],
+    "bodyFields": [],
+    "bodyExample": null
+  },
+  {
+    "name": "gapify_list_teams",
+    "folder": "Teams",
+    "title": "List all teams",
+    "method": "GET",
+    "path": "/api/v1/accounts/{account_id}/teams",
+    "summary": "List all teams available in the current account",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [],
+    "bodyExample": null
+  },
+  {
+    "name": "gapify_create_team",
+    "folder": "Teams",
+    "title": "Create a team",
+    "method": "POST",
+    "path": "/api/v1/accounts/{account_id}/teams",
+    "summary": "Create a team in the account",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [
+      {
+        "name": "name",
+        "type": "string",
+        "required": false,
+        "description": "The name of the team",
+        "example": "string"
+      },
+      {
+        "name": "description",
+        "type": "string",
+        "required": false,
+        "description": "The description of the team",
+        "example": "string"
+      },
+      {
+        "name": "allow_auto_assign",
+        "type": "boolean",
+        "required": false,
+        "description": "If this setting is turned on, the system would automatically assign the conversation to an agent in the team while assigning the conversation to a team",
+        "example": false
+      }
+    ],
+    "bodyExample": {
+      "name": "string",
+      "description": "string",
+      "allow_auto_assign": false
+    }
+  },
+  {
+    "name": "gapify_get_team",
+    "folder": "Teams",
+    "title": "Get a team details",
+    "method": "GET",
+    "path": "/api/v1/accounts/{account_id}/teams/{team_id}",
+    "summary": "Get the details of a team in the account",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      },
+      {
+        "name": "team_id",
+        "description": "The ID of the team to be updated"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [],
+    "bodyExample": null
+  },
+  {
+    "name": "gapify_update_team",
+    "folder": "Teams",
+    "title": "Update a team",
+    "method": "PATCH",
+    "path": "/api/v1/accounts/{account_id}/teams/{team_id}",
+    "summary": "Update a team's attributes",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      },
+      {
+        "name": "team_id",
+        "description": "The ID of the team to be updated"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [
+      {
+        "name": "name",
+        "type": "string",
+        "required": false,
+        "description": "The name of the team",
+        "example": "string"
+      },
+      {
+        "name": "description",
+        "type": "string",
+        "required": false,
+        "description": "The description of the team",
+        "example": "string"
+      },
+      {
+        "name": "allow_auto_assign",
+        "type": "boolean",
+        "required": false,
+        "description": "If this setting is turned on, the system would automatically assign the conversation to an agent in the team while assigning the conversation to a team",
+        "example": false
+      }
+    ],
+    "bodyExample": {
+      "name": "string",
+      "description": "string",
+      "allow_auto_assign": false
+    }
+  },
+  {
+    "name": "gapify_delete_team",
+    "folder": "Teams",
+    "title": "Delete a team",
+    "method": "DELETE",
+    "path": "/api/v1/accounts/{account_id}/teams/{team_id}",
+    "summary": "Delete a team from the account",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      },
+      {
+        "name": "team_id",
+        "description": "The ID of the team to be updated"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [],
+    "bodyExample": null
+  },
+  {
+    "name": "gapify_list_team_agents",
+    "folder": "Teams",
+    "title": "List Agents in Team",
+    "method": "GET",
+    "path": "/api/v1/accounts/{account_id}/teams/{team_id}/team_members",
+    "summary": "List the agents in a team",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      },
+      {
+        "name": "team_id",
+        "description": "The ID of the team to be updated"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [],
+    "bodyExample": null
+  },
+  {
+    "name": "gapify_add_team_agents",
+    "folder": "Teams",
+    "title": "Add a New Agent",
+    "method": "POST",
+    "path": "/api/v1/accounts/{account_id}/teams/{team_id}/team_members",
+    "summary": "Add agents to a team",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      },
+      {
+        "name": "team_id",
+        "description": "The ID of the team to be updated"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [
+      {
+        "name": "user_ids",
+        "type": "array",
+        "required": true,
+        "description": "IDs of users to be added to the team",
+        "example": [
+          1
+        ]
+      }
+    ],
+    "bodyExample": {
+      "user_ids": [
+        1
+      ]
+    }
+  },
+  {
+    "name": "gapify_update_team_agents",
+    "folder": "Teams",
+    "title": "Update Agents in Team",
+    "method": "PATCH",
+    "path": "/api/v1/accounts/{account_id}/teams/{team_id}/team_members",
+    "summary": "Replace the agents of a team. Agents not in user_ids are removed from the team",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      },
+      {
+        "name": "team_id",
+        "description": "The ID of the team to be updated"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [
+      {
+        "name": "user_ids",
+        "type": "array",
+        "required": true,
+        "description": "IDs of users to be added to the team",
+        "example": [
+          1
+        ]
+      }
+    ],
+    "bodyExample": {
+      "user_ids": [
+        1
+      ]
+    }
+  },
+  {
+    "name": "gapify_remove_team_agent",
+    "folder": "Teams",
+    "title": "Remove an Agent from Team",
+    "method": "DELETE",
+    "path": "/api/v1/accounts/{account_id}/teams/{team_id}/team_members",
+    "summary": "Remove agents from a team",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      },
+      {
+        "name": "team_id",
+        "description": "The ID of the team to be updated"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [
+      {
+        "name": "user_ids",
+        "type": "array",
+        "required": true,
+        "description": "IDs of users to be deleted from the team",
+        "example": [
+          1
+        ]
+      }
+    ],
+    "bodyExample": {
+      "user_ids": [
+        1
+      ]
+    }
+  },
+  {
+    "name": "gapify_list_webhooks",
+    "folder": "Webhooks",
+    "title": "List all webhooks",
+    "method": "GET",
+    "path": "/api/v1/accounts/{account_id}/webhooks",
+    "summary": "List all webhooks in the account",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [],
+    "bodyExample": null
+  },
+  {
+    "name": "gapify_add_webhook",
+    "folder": "Webhooks",
+    "title": "Add a webhook",
+    "method": "POST",
+    "path": "/api/v1/accounts/{account_id}/webhooks",
+    "summary": "Add a webhook subscription to the account",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [
+      {
+        "name": "url",
+        "type": "string",
+        "required": false,
+        "description": "The url where the events should be sent",
+        "example": "https://example.com"
+      },
+      {
+        "name": "subscriptions",
+        "type": "array",
+        "required": false,
+        "description": "The events you want to subscribe to.",
+        "example": [
+          "conversation_created"
+        ]
+      }
+    ],
+    "bodyExample": {
+      "url": "https://example.com",
+      "subscriptions": [
+        "conversation_created"
+      ]
+    }
+  },
+  {
+    "name": "gapify_update_webhook",
+    "folder": "Webhooks",
+    "title": "Update a webhook object",
+    "method": "PATCH",
+    "path": "/api/v1/accounts/{account_id}/webhooks/{webhook_id}",
+    "summary": "Update a webhook object in the account",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      },
+      {
+        "name": "webhook_id",
+        "description": "The numeric ID of the webhook"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [
+      {
+        "name": "url",
+        "type": "string",
+        "required": false,
+        "description": "The url where the events should be sent",
+        "example": "https://example.com"
+      },
+      {
+        "name": "subscriptions",
+        "type": "array",
+        "required": false,
+        "description": "The events you want to subscribe to.",
+        "example": [
+          "conversation_created"
+        ]
+      }
+    ],
+    "bodyExample": {
+      "url": "https://example.com",
+      "subscriptions": [
+        "conversation_created"
+      ]
+    }
+  },
+  {
+    "name": "gapify_delete_webhook",
+    "folder": "Webhooks",
+    "title": "Delete a webhook",
+    "method": "DELETE",
+    "path": "/api/v1/accounts/{account_id}/webhooks/{webhook_id}",
+    "summary": "Delete a webhook from the account",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      },
+      {
+        "name": "webhook_id",
+        "description": "The numeric ID of the webhook"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [],
+    "bodyExample": null
+  },
+  {
+    "name": "gapify_list_automation_rules",
+    "folder": "Automation Rule",
+    "title": "List all automation rules in an account",
+    "method": "GET",
+    "path": "/api/v1/accounts/{account_id}/automation_rules",
+    "summary": "List automation rules in the account",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      }
+    ],
+    "queryParams": [
+      {
+        "name": "page",
+        "description": "The page parameter",
+        "example": "1"
+      }
+    ],
+    "bodyFields": [],
+    "bodyExample": null
+  },
+  {
+    "name": "gapify_add_automation_rule",
+    "folder": "Automation Rule",
+    "title": "Add a new automation rule",
+    "method": "POST",
+    "path": "/api/v1/accounts/{account_id}/automation_rules",
+    "summary": "Add a new automation rule to account",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [
+      {
+        "name": "name",
+        "type": "string",
+        "required": false,
+        "description": "Rule name",
+        "example": "Add label on message create event"
+      },
+      {
+        "name": "description",
+        "type": "string",
+        "required": false,
+        "description": "The description about the automation and actions",
+        "example": "Add label support and sales on message create event if incoming message content contains text help"
+      },
+      {
+        "name": "event_name",
+        "type": "string",
+        "required": false,
+        "description": "Event that triggers the rule. One of: `conversation_created`, `conversation_updated`, `message_created`.",
+        "example": "message_created"
+      },
+      {
+        "name": "active",
+        "type": "boolean",
+        "required": false,
+        "description": "Enable/disable automation rule",
+        "example": false
+      },
+      {
+        "name": "actions",
+        "type": "array",
+        "required": false,
+        "description": "Array of actions which you want to perform when condition matches, e.g add label support if message contains content help.",
+        "example": [
+          {
+            "action_name": "add_label",
+            "action_params": [
+              "support"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "conditions",
+        "type": "array",
+        "required": false,
+        "description": "Array of conditions on which conversation filter would work, e.g message content contains text help.",
+        "example": [
+          {
+            "attribute_key": "content",
+            "filter_operator": "contains",
+            "query_operator": "nil",
+            "values": [
+              "help"
+            ]
+          }
+        ]
+      }
+    ],
+    "bodyExample": {
+      "name": "Add label on message create event",
+      "description": "Add label support and sales on message create event if incoming message content contains text help",
+      "event_name": "message_created",
+      "active": false,
+      "actions": [
+        {
+          "action_name": "add_label",
+          "action_params": [
+            "support"
+          ]
+        }
+      ],
+      "conditions": [
+        {
+          "attribute_key": "content",
+          "filter_operator": "contains",
+          "query_operator": "nil",
+          "values": [
+            "help"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "name": "gapify_get_automation_rule",
+    "folder": "Automation Rule",
+    "title": "Get a automation rule details",
+    "method": "GET",
+    "path": "/api/v1/accounts/{account_id}/automation_rules/{id}",
+    "summary": "Get an automation rule by ID",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      },
+      {
+        "name": "id",
+        "description": "The ID of the automation rule to be updated."
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [],
+    "bodyExample": null
+  },
+  {
+    "name": "gapify_update_automation_rule",
+    "folder": "Automation Rule",
+    "title": "Update automation rule in Account",
+    "method": "PATCH",
+    "path": "/api/v1/accounts/{account_id}/automation_rules/{id}",
+    "summary": "Update an automation rule in the account",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      },
+      {
+        "name": "id",
+        "description": "The ID of the automation rule to be updated."
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [
+      {
+        "name": "name",
+        "type": "string",
+        "required": false,
+        "description": "Rule name",
+        "example": "Add label on message create event"
+      },
+      {
+        "name": "description",
+        "type": "string",
+        "required": false,
+        "description": "The description about the automation and actions",
+        "example": "Add label support and sales on message create event if incoming message content contains text help"
+      },
+      {
+        "name": "event_name",
+        "type": "string",
+        "required": false,
+        "description": "Event that triggers the rule. One of: `conversation_created`, `conversation_updated`, `message_created`.",
+        "example": "message_created"
+      },
+      {
+        "name": "active",
+        "type": "boolean",
+        "required": false,
+        "description": "Enable/disable automation rule",
+        "example": false
+      },
+      {
+        "name": "actions",
+        "type": "array",
+        "required": false,
+        "description": "Array of actions which you want to perform when condition matches, e.g add label support if message contains content help.",
+        "example": [
+          {
+            "action_name": "add_label",
+            "action_params": [
+              "support"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "conditions",
+        "type": "array",
+        "required": false,
+        "description": "Array of conditions on which conversation filter would work, e.g message content contains text help.",
+        "example": [
+          {
+            "attribute_key": "content",
+            "filter_operator": "contains",
+            "query_operator": "nil",
+            "values": [
+              "help"
+            ]
+          }
+        ]
+      }
+    ],
+    "bodyExample": {
+      "name": "Add label on message create event",
+      "description": "Add label support and sales on message create event if incoming message content contains text help",
+      "event_name": "message_created",
+      "active": false,
+      "actions": [
+        {
+          "action_name": "add_label",
+          "action_params": [
+            "support"
+          ]
+        }
+      ],
+      "conditions": [
+        {
+          "attribute_key": "content",
+          "filter_operator": "contains",
+          "query_operator": "nil",
+          "values": [
+            "help"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "name": "gapify_remove_automation_rule",
+    "folder": "Automation Rule",
+    "title": "Remove a automation rule from account",
+    "method": "DELETE",
+    "path": "/api/v1/accounts/{account_id}/automation_rules/{id}",
+    "summary": "Remove an automation rule from the account",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      },
+      {
+        "name": "id",
+        "description": "The ID of the automation rule to be deleted"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [],
+    "bodyExample": null
+  },
+  {
+    "name": "gapify_add_portal",
+    "folder": "Help Center",
+    "title": "Add a new portal",
+    "method": "POST",
+    "path": "/api/v1/accounts/{account_id}/portals",
+    "summary": "Create a help center portal in the account",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [
+      {
+        "name": "archived",
+        "type": "boolean",
+        "required": false,
+        "description": "Status to check if portal is live",
+        "example": false
+      },
+      {
+        "name": "color",
+        "type": "string",
+        "required": false,
+        "description": "Header color for help-center",
+        "example": "add color HEX string, \"#fffff\""
+      },
+      {
+        "name": "config",
+        "type": "object",
+        "required": false,
+        "description": "Configuration about supporting locales",
+        "example": {
+          "allowed_locales": [
+            "en",
+            "es"
+          ],
+          "default_locale": "en"
+        }
+      },
+      {
+        "name": "custom_domain",
+        "type": "string",
+        "required": false,
+        "description": "Custom domain to  display help center.",
+        "example": "https://app.gapify.ai/hc/help-center"
+      },
+      {
+        "name": "header_text",
+        "type": "string",
+        "required": false,
+        "description": "Help center header",
+        "example": "Handbook"
+      },
+      {
+        "name": "homepage_link",
+        "type": "string",
+        "required": false,
+        "description": "link to main dashboard",
+        "example": "https://gapify.ai/"
+      },
+      {
+        "name": "name",
+        "type": "string",
+        "required": false,
+        "description": "Name for the portal",
+        "example": "string"
+      },
+      {
+        "name": "slug",
+        "type": "string",
+        "required": false,
+        "description": "Slug for the portal to display in link",
+        "example": "string"
+      },
+      {
+        "name": "page_title",
+        "type": "string",
+        "required": false,
+        "description": "Page title for the portal",
+        "example": "string"
+      },
+      {
+        "name": "account_id",
+        "type": "number",
+        "required": false,
+        "description": "Numeric ID of the account.",
+        "example": 1
+      }
+    ],
+    "bodyExample": {
+      "archived": false,
+      "color": "add color HEX string, \"#fffff\"",
+      "config": {
+        "allowed_locales": [
+          "en",
+          "es"
+        ],
+        "default_locale": "en"
+      },
+      "custom_domain": "https://app.gapify.ai/hc/help-center",
+      "header_text": "Handbook",
+      "homepage_link": "https://gapify.ai/",
+      "name": "string",
+      "slug": "string",
+      "page_title": "string",
+      "account_id": 1
+    }
+  },
+  {
+    "name": "gapify_list_portals",
+    "folder": "Help Center",
+    "title": "List all portals in an account",
+    "method": "GET",
+    "path": "/api/v1/accounts/{account_id}/portals",
+    "summary": "List help center portals in the account",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [],
+    "bodyExample": null
+  },
+  {
+    "name": "gapify_update_portal",
+    "folder": "Help Center",
+    "title": "update a new portal",
+    "method": "PATCH",
+    "path": "/api/v1/accounts/{account_id}/portals",
+    "summary": "Update a help center portal",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [
+      {
+        "name": "archived",
+        "type": "boolean",
+        "required": false,
+        "description": "Status to check if portal is live",
+        "example": false
+      },
+      {
+        "name": "color",
+        "type": "string",
+        "required": false,
+        "description": "Header color for help-center",
+        "example": "add color HEX string, \"#fffff\""
+      },
+      {
+        "name": "config",
+        "type": "object",
+        "required": false,
+        "description": "Configuration about supporting locales",
+        "example": {
+          "allowed_locales": [
+            "en",
+            "es"
+          ],
+          "default_locale": "en"
+        }
+      },
+      {
+        "name": "custom_domain",
+        "type": "string",
+        "required": false,
+        "description": "Custom domain to  display help center.",
+        "example": "https://app.gapify.ai/hc/help-center"
+      },
+      {
+        "name": "header_text",
+        "type": "string",
+        "required": false,
+        "description": "Help center header",
+        "example": "Handbook"
+      },
+      {
+        "name": "homepage_link",
+        "type": "string",
+        "required": false,
+        "description": "link to main dashboard",
+        "example": "https://gapify.ai/"
+      },
+      {
+        "name": "name",
+        "type": "string",
+        "required": false,
+        "description": "Name for the portal",
+        "example": "string"
+      },
+      {
+        "name": "slug",
+        "type": "string",
+        "required": false,
+        "description": "Slug for the portal to display in link",
+        "example": "string"
+      },
+      {
+        "name": "page_title",
+        "type": "string",
+        "required": false,
+        "description": "Page title for the portal",
+        "example": "string"
+      },
+      {
+        "name": "account_id",
+        "type": "number",
+        "required": false,
+        "description": "Numeric ID of the account.",
+        "example": 1
+      }
+    ],
+    "bodyExample": {
+      "archived": false,
+      "color": "add color HEX string, \"#fffff\"",
+      "config": {
+        "allowed_locales": [
+          "en",
+          "es"
+        ],
+        "default_locale": "en"
+      },
+      "custom_domain": "https://app.gapify.ai/hc/help-center",
+      "header_text": "Handbook",
+      "homepage_link": "https://gapify.ai/",
+      "name": "string",
+      "slug": "string",
+      "page_title": "string",
+      "account_id": 1
+    }
+  },
+  {
+    "name": "gapify_add_category",
+    "folder": "Help Center",
+    "title": "Add a new category",
+    "method": "POST",
+    "path": "/api/v1/accounts/{account_id}/portals/{portal_id}/categories",
+    "summary": "Add a category to a help center portal",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      },
+      {
+        "name": "portal_id",
+        "description": "portal_id (string)"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [
+      {
+        "name": "description",
+        "type": "string",
+        "required": false,
+        "description": "Category description",
+        "example": "string"
+      },
+      {
+        "name": "locale",
+        "type": "string",
+        "required": false,
+        "description": "Category locale",
+        "example": "en/es"
+      },
+      {
+        "name": "name",
+        "type": "string",
+        "required": false,
+        "description": "Category name",
+        "example": "string"
+      },
+      {
+        "name": "slug",
+        "type": "string",
+        "required": false,
+        "description": "Category slug",
+        "example": "string"
+      },
+      {
+        "name": "position",
+        "type": "number",
+        "required": false,
+        "description": "Category position in the portal list to sort",
+        "example": 0
+      },
+      {
+        "name": "portal_id",
+        "type": "number",
+        "required": false,
+        "description": "Numeric ID of the help center portal.",
+        "example": 1
+      },
+      {
+        "name": "account_id",
+        "type": "number",
+        "required": false,
+        "description": "Numeric ID of the account.",
+        "example": 1
+      },
+      {
+        "name": "associated_category_id",
+        "type": "number",
+        "required": false,
+        "description": "To associate similar categories to each other, e.g same category of product documentation in different languages",
+        "example": 1
+      },
+      {
+        "name": "parent_category_id",
+        "type": "number",
+        "required": false,
+        "description": "To define parent category, e.g product documentation has multiple level features in sales category or in engineering category.",
+        "example": 1
+      }
+    ],
+    "bodyExample": {
+      "description": "string",
+      "locale": "en/es",
+      "name": "string",
+      "slug": "string",
+      "position": 0,
+      "portal_id": 1,
+      "account_id": 1,
+      "associated_category_id": 1,
+      "parent_category_id": 1
+    }
+  },
+  {
+    "name": "gapify_add_article",
+    "folder": "Help Center",
+    "title": "Add a new article",
+    "method": "POST",
+    "path": "/api/v1/accounts/{account_id}/portals/{portal_id}/articles",
+    "summary": "Add an article to a help center portal",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "account_id",
+        "description": "The numeric ID of the account"
+      },
+      {
+        "name": "portal_id",
+        "description": "portal_id (string)"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [
+      {
+        "name": "content",
+        "type": "string",
+        "required": false,
+        "description": "The text content.",
+        "example": "string"
+      },
+      {
+        "name": "meta",
+        "type": "object",
+        "required": false,
+        "description": "Use for search",
+        "example": {
+          "tags": [
+            "article_name"
+          ],
+          "title": "article title",
+          "description": "article description"
+        }
+      },
+      {
+        "name": "position",
+        "type": "number",
+        "required": false,
+        "description": "article position in category",
+        "example": 0
+      },
+      {
+        "name": "status",
+        "type": "string",
+        "required": false,
+        "description": "Publication status of the article. One of: `draft`, `published`, `archived`."
+      },
+      {
+        "name": "title",
+        "type": "string",
+        "required": false,
+        "description": "Title of the article.",
+        "example": "string"
+      },
+      {
+        "name": "slug",
+        "type": "string",
+        "required": false,
+        "description": "URL slug of the article (ASCII letters, digits and dashes).",
+        "example": "string"
+      },
+      {
+        "name": "views",
+        "type": "number",
+        "required": false,
+        "description": "Initial view count of the article.",
+        "example": 0
+      },
+      {
+        "name": "portal_id",
+        "type": "number",
+        "required": false,
+        "description": "Numeric ID of the help center portal.",
+        "example": 1
+      },
+      {
+        "name": "account_id",
+        "type": "number",
+        "required": false,
+        "description": "Numeric ID of the account.",
+        "example": 1
+      },
+      {
+        "name": "author_id",
+        "type": "number",
+        "required": false,
+        "description": "Numeric ID of the user who authored the article.",
+        "example": 1
+      },
+      {
+        "name": "category_id",
+        "type": "number",
+        "required": false,
+        "description": "Numeric ID of the help center category.",
+        "example": 1
+      },
+      {
+        "name": "folder_id",
+        "type": "number",
+        "required": false,
+        "description": "Numeric ID of the help center folder.",
+        "example": 1
+      },
+      {
+        "name": "associated_article_id",
+        "type": "number",
+        "required": false,
+        "description": "To associate similar articles to each other, e.g to provide the link for the reference.",
+        "example": 1
+      }
+    ],
+    "bodyExample": {
+      "content": "string",
+      "meta": {
+        "tags": [
+          "article_name"
+        ],
+        "title": "article title",
+        "description": "article description"
+      },
+      "position": 0,
+      "status": [
+        "draft",
+        "published",
+        "archived"
+      ],
+      "title": "string",
+      "slug": "string",
+      "views": 0,
+      "portal_id": 1,
+      "account_id": 1,
+      "author_id": 1,
+      "category_id": 1,
+      "folder_id": 1,
+      "associated_article_id": 1
+    }
+  },
+  {
+    "name": "gapify_client_get_inbox",
+    "folder": "Inbox API",
+    "title": "Inbox details",
+    "method": "GET",
+    "path": "/public/api/v1/inboxes/{inbox_identifier}",
+    "summary": "Get the details of an inbox",
+    "authLine": "",
+    "auth": "none",
+    "pathParams": [
+      {
+        "name": "inbox_identifier",
+        "description": "The identifier obtained from API inbox channel"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [],
+    "bodyExample": null
+  },
+  {
+    "name": "gapify_client_create_contact",
+    "folder": "Contacts API",
+    "title": "Create a contact",
+    "method": "POST",
+    "path": "/public/api/v1/inboxes/{inbox_identifier}/contacts",
+    "summary": "Create a contact",
+    "authLine": "",
+    "auth": "none",
+    "pathParams": [
+      {
+        "name": "inbox_identifier",
+        "description": "The identifier obtained from API inbox channel"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [
+      {
+        "name": "identifier",
+        "type": "string",
+        "required": false,
+        "description": "External identifier of the contact",
+        "example": "string"
+      },
+      {
+        "name": "identifier_hash",
+        "type": "string",
+        "required": false,
+        "description": "Identifier hash prepared for HMAC authentication",
+        "example": "string"
+      },
+      {
+        "name": "email",
+        "type": "string",
+        "required": false,
+        "description": "Email of the contact",
+        "example": "user@example.com"
+      },
+      {
+        "name": "name",
+        "type": "string",
+        "required": false,
+        "description": "Name of the contact",
+        "example": "string"
+      },
+      {
+        "name": "phone_number",
+        "type": "string",
+        "required": false,
+        "description": "Phone number of the contact",
+        "example": "string"
+      },
+      {
+        "name": "avatar_url",
+        "type": "string",
+        "required": false,
+        "description": "The url to a jpeg, png file for the user avatar",
+        "example": "https://example.com"
+      },
+      {
+        "name": "custom_attributes",
+        "type": "object",
+        "required": false,
+        "description": "Custom attributes of the customer",
+        "example": {}
+      }
+    ],
+    "bodyExample": {
+      "identifier": "string",
+      "identifier_hash": "string",
+      "email": "user@example.com",
+      "name": "string",
+      "phone_number": "string",
+      "avatar_url": "https://example.com",
+      "custom_attributes": {}
+    }
+  },
+  {
+    "name": "gapify_client_get_contact",
+    "folder": "Contacts API",
+    "title": "Get a contact",
+    "method": "GET",
+    "path": "/public/api/v1/inboxes/{inbox_identifier}/contacts/{contact_identifier}",
+    "summary": "Get the details of a contact",
+    "authLine": "",
+    "auth": "none",
+    "pathParams": [
+      {
+        "name": "inbox_identifier",
+        "description": "The identifier obtained from API inbox channel"
+      },
+      {
+        "name": "contact_identifier",
+        "description": "The source id of contact obtained on contact create"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [],
+    "bodyExample": null
+  },
+  {
+    "name": "gapify_client_update_contact",
+    "folder": "Contacts API",
+    "title": "Update a contact",
+    "method": "PATCH",
+    "path": "/public/api/v1/inboxes/{inbox_identifier}/contacts/{contact_identifier}",
+    "summary": "Update a contact's attributes",
+    "authLine": "",
+    "auth": "none",
+    "pathParams": [
+      {
+        "name": "inbox_identifier",
+        "description": "The identifier obtained from API inbox channel"
+      },
+      {
+        "name": "contact_identifier",
+        "description": "The source id of contact obtained on contact create"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [
+      {
+        "name": "identifier",
+        "type": "string",
+        "required": false,
+        "description": "External identifier of the contact",
+        "example": "string"
+      },
+      {
+        "name": "identifier_hash",
+        "type": "string",
+        "required": false,
+        "description": "Identifier hash prepared for HMAC authentication",
+        "example": "string"
+      },
+      {
+        "name": "email",
+        "type": "string",
+        "required": false,
+        "description": "Email of the contact",
+        "example": "user@example.com"
+      },
+      {
+        "name": "name",
+        "type": "string",
+        "required": false,
+        "description": "Name of the contact",
+        "example": "string"
+      },
+      {
+        "name": "phone_number",
+        "type": "string",
+        "required": false,
+        "description": "Phone number of the contact",
+        "example": "string"
+      },
+      {
+        "name": "avatar_url",
+        "type": "string",
+        "required": false,
+        "description": "The url to a jpeg, png file for the user avatar",
+        "example": "https://example.com"
+      },
+      {
+        "name": "custom_attributes",
+        "type": "object",
+        "required": false,
+        "description": "Custom attributes of the customer",
+        "example": {}
+      }
+    ],
+    "bodyExample": {
+      "identifier": "string",
+      "identifier_hash": "string",
+      "email": "user@example.com",
+      "name": "string",
+      "phone_number": "string",
+      "avatar_url": "https://example.com",
+      "custom_attributes": {}
+    }
+  },
+  {
+    "name": "gapify_client_create_conversation",
+    "folder": "Conversations API",
+    "title": "Create a conversation",
+    "method": "POST",
+    "path": "/public/api/v1/inboxes/{inbox_identifier}/contacts/{contact_identifier}/conversations",
+    "summary": "Create a conversation",
+    "authLine": "",
+    "auth": "none",
+    "pathParams": [
+      {
+        "name": "inbox_identifier",
+        "description": "The identifier obtained from API inbox channel"
+      },
+      {
+        "name": "contact_identifier",
+        "description": "The source id of contact obtained on contact create"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [
+      {
+        "name": "custom_attributes",
+        "type": "object",
+        "required": false,
+        "description": "Custom attributes of the conversation",
+        "example": {}
+      }
+    ],
+    "bodyExample": {
+      "custom_attributes": {}
+    }
+  },
+  {
+    "name": "gapify_client_list_conversations",
+    "folder": "Conversations API",
+    "title": "List all conversations",
+    "method": "GET",
+    "path": "/public/api/v1/inboxes/{inbox_identifier}/contacts/{contact_identifier}/conversations",
+    "summary": "List all conversations for the contact",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "inbox_identifier",
+        "description": "The identifier obtained from API inbox channel"
+      },
+      {
+        "name": "contact_identifier",
+        "description": "The source id of contact obtained on contact create"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [],
+    "bodyExample": null
+  },
+  {
+    "name": "gapify_client_create_message",
+    "folder": "Messages API",
+    "title": "Create a message",
+    "method": "POST",
+    "path": "/public/api/v1/inboxes/{inbox_identifier}/contacts/{contact_identifier}/conversations/{conversation_id}/messages",
+    "summary": "Create a message",
+    "authLine": "",
+    "auth": "none",
+    "pathParams": [
+      {
+        "name": "inbox_identifier",
+        "description": "The identifier obtained from API inbox channel"
+      },
+      {
+        "name": "contact_identifier",
+        "description": "The source id of contact obtained on contact create"
+      },
+      {
+        "name": "conversation_id",
+        "description": "The numeric ID of the conversation"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [
+      {
+        "name": "content",
+        "type": "string",
+        "required": false,
+        "description": "Content for the message",
+        "example": "string"
+      },
+      {
+        "name": "echo_id",
+        "type": "string",
+        "required": false,
+        "description": "Temporary identifier which will be passed back via websockets",
+        "example": "string"
+      }
+    ],
+    "bodyExample": {
+      "content": "string",
+      "echo_id": "string"
+    }
+  },
+  {
+    "name": "gapify_client_list_messages",
+    "folder": "Messages API",
+    "title": "List all messages",
+    "method": "GET",
+    "path": "/public/api/v1/inboxes/{inbox_identifier}/contacts/{contact_identifier}/conversations/{conversation_id}/messages",
+    "summary": "List all messages in the conversation",
+    "authLine": "User API key (header `api-access-token`).",
+    "auth": "user",
+    "pathParams": [
+      {
+        "name": "inbox_identifier",
+        "description": "The identifier obtained from API inbox channel"
+      },
+      {
+        "name": "contact_identifier",
+        "description": "The source id of contact obtained on contact create"
+      },
+      {
+        "name": "conversation_id",
+        "description": "The numeric ID of the conversation"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [],
+    "bodyExample": null
+  },
+  {
+    "name": "gapify_client_update_message",
+    "folder": "Messages API",
+    "title": "Update a message",
+    "method": "PATCH",
+    "path": "/public/api/v1/inboxes/{inbox_identifier}/contacts/{contact_identifier}/conversations/{conversation_id}/messages/{message_id}",
+    "summary": "Update a message",
+    "authLine": "",
+    "auth": "none",
+    "pathParams": [
+      {
+        "name": "inbox_identifier",
+        "description": "The identifier obtained from API inbox channel"
+      },
+      {
+        "name": "contact_identifier",
+        "description": "The source id of contact obtained on contact create"
+      },
+      {
+        "name": "conversation_id",
+        "description": "The numeric ID of the conversation"
+      },
+      {
+        "name": "message_id",
+        "description": "The numeric ID of the message"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [
+      {
+        "name": "submitted_values",
+        "type": "object",
+        "required": false,
+        "description": "Values the contact submitted for an interactive message (form, input_select or cards)."
+      }
+    ],
+    "bodyExample": {
+      "submitted_values": null
+    }
+  },
+  {
+    "name": "gapify_get_csat_survey",
+    "folder": "CSAT Survey Page",
+    "title": "Get CSAT survey page",
+    "method": "GET",
+    "path": "/survey/responses/{conversation_uuid}",
+    "summary": "Get the hosted CSAT (customer satisfaction) survey page for a conversation",
+    "authLine": "",
+    "auth": "none",
+    "pathParams": [
+      {
+        "name": "conversation_uuid",
+        "description": "The uuid of the conversation"
+      }
+    ],
+    "queryParams": [],
+    "bodyFields": [],
+    "bodyExample": null
+  }
+]
