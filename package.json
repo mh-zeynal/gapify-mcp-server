@@ -2,6 +2,15 @@
   "name": "gapify-mcp-server",
   "version": "1.0.0",
   "description": "MCP server exposing the Gapify (Chatwoot-compatible) customer-support API as tools, with Persian (Farsi) input support",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mh-zeynal/gapify-mcp-server.git"
+  },
+  "homepage": "https://github.com/mh-zeynal/gapify-mcp-server#readme",
+  "bugs": {
+    "url": "https://github.com/mh-zeynal/gapify-mcp-server/issues"
+  },
+  "author": "mh-zeynal <mh.zeynal@gmail.com>",
   "type": "module",
   "main": "dist/index.js",
   "bin": {

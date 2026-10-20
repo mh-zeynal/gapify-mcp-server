@@ -7,6 +7,8 @@ Claude Code, Claude Desktop, or any other MCP client. Built on the official
 
 Tool descriptions are in English; tool inputs may be in Persian (Farsi). See [Persian input](#persian-input).
 
+[راهنمای فارسی](README.fa.md)
+
 ## Install
 
 No clone needed; MCP clients run it with `npx`:
