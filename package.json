@@ -1,6 +1,6 @@
 {
   "name": "gapify-mcp-server",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "MCP server exposing the Gapify (Chatwoot-compatible) customer-support API as tools, with Persian (Farsi) input support",
   "repository": {
     "type": "git",
